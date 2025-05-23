@@ -1,0 +1,247 @@
+/* ======= BASE GENERAL ======= */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url('https://i.pinimg.com/736x/09/64/58/096458c2b6e3d338fbbd6a4bd6dd3cfb.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-color: #111;
+  color: #f1f1f1;
+  line-height: 1.6;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}
+
+/* ======= ENCABEZADO ======= */
+.encabezado {
+  background-color: #488ec1;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 3px solid #b8860b;
+}
+
+.encabezado h1, .encabezado h2 {
+  margin: 0;
+  color: #FFD700;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+}
+
+.encabezado h2 {
+  font-size: 1.8em;
+}
+
+.encabezado nav a {
+  color: #fff;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* ======= CONTENEDOR PRINCIPAL ======= */
+.main-container {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: auto;
+  background-color: rgba(0,0,0,0.85);
+  border-radius: 10px;
+}
+
+/* ======= SECCIONES ======= */
+section h2 {
+  border-left: 5px solid #FF4C4C;
+  padding-left: 10px;
+  color: #FFD700;
+  font-size: 1.8em;
+  margin-bottom: 15px;
+}
+
+.seccion-vida p,
+.seccion-vida ul {
+  text-align: center;
+}
+
+.seccion-vida li {
+  background: #1e1e1e;
+  margin: 10px auto;
+  padding: 15px;
+  border-left: 5px solid #b8860b;
+  border-radius: 5px;
+  max-width: 600px;
+}
+
+.seccion-vida img {
+  display: block;
+  margin: 20px auto;
+  max-width: 300px;
+  border-radius: 10px;
+  border: 2px solid #444;
+}
+
+/* ======= GALERÍA DE SERVICIOS ======= */
+.fotos-proyecto {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.fotos-proyecto img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 2px solid #444;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.fotos-proyecto img:hover {
+  transform: scale(1.05);
+}
+
+.servicio {
+  text-align: center;
+  width: 220px;
+}
+
+.servicio p {
+  margin-top: 8px;
+  font-size: 1rem;
+  color: #f1f1f1;
+}
+
+/* ======= VIDEO CONTAINER ======= */
+.video-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.video-container iframe {
+  width: 320px;
+  height: 180px;
+  border: none;
+  border-radius: 10px;
+}
+
+/* ======= MAPA ======= */
+.mapa-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.mapa-container iframe {
+  width: 90%;
+  max-width: 800px;
+  height: 400px;
+  border: none;
+  border-radius: 10px;
+}
+
+/* ======= CONTACTO WHATSAPP ======= */
+.contacto-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.whatsapp-info {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #25D366;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 16px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+}
+
+/* ======= FOOTER ======= */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #1a1a1a;
+  border-top: 2px solid #444;
+  color: #888;
+  font-size: 0.9rem;
+}
+
+/* ======= MÚSICA ======= */
+#music-control {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #333;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+  transition: background 0.3s;
+  z-index: 1000;
+}
+
+#music-control:hover {
+  background: #FFD700;
+  color: #000;
+}
+
+/* ======= REMOVER ANIMACIONES ======= */
+.animar, .animar-delay-1, .animar-delay-2, .animar-delay-3, .animar-delay-4 {
+  opacity: 1;
+  transform: none;
+  animation: none !important;
+}
+
+/* Animación de color para los títulos */
+@keyframes cambioColorTitulo {
+  0%, 100% {
+    color: #FFD700; /* Amarillo */
+  }
+  50% {
+    color: #FFA500; /* Naranja */
+  }
+}
+
+.titulo-animado,
+section h2 {
+  animation: cambioColorTitulo 3s infinite ease-in-out;
+}
+
+/* Animación para que los títulos cambien de color entre amarillo y naranja */
+.titulo-animado {
+  animation: cambioColor 2s infinite alternate;
+}
+
+@keyframes cambioColor {
+  0% { color: #FFD700; } /* Amarillo */
+  100% { color: orange; } /* Naranja */
+}
+
+
+.seccion-titulo {
+  color: #FFD700; /* Amarillo */
+  font-size: 1.8rem;
+  font-weight: bold;
+  border-left: 6px solid red;
+  padding-left: 10px;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+

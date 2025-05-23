@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Proyecto de Vida - Barbería</title>
+  <link rel="stylesheet" href="estilos.css" />
+  <link rel="icon" href="https://png.pngtree.com/png-clipart/20220530/original/pngtree-barbershop-icon-on-transparent-background-png-image_7769197.png" />
+</head>
+<body>
+
+  <header class="encabezado animar animar-delay-1">
+    <img src="https://raw.githubusercontent.com/imagenes-web/alexanderPulgarin/e99308a812da04982f6d4fd323e7096270a6957e/alexander_logo_sinfondo.png" alt="Logo Alexander" style="max-width: 120px;" />
+    <h1 class="titulo-animado">Proyecto de Vida</h1>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="proyecto_vida.html">Proyecto de Vida</a>
+    </nav>
+  </header>
+
+  <main class="main-container">
+
+    <!-- Galería Personal -->
+    <section class="animar animar-delay-2">
+      <div class="fotos-proyecto">
+        <img src="https://i.pinimg.com/736x/18/41/d8/1841d8e59fbac10ab2c0e12131ac5761.jpg" alt="Barbero trabajando" />
+        <img src="https://i.pinimg.com/originals/5c/c5/d9/5cc5d9732c2b306fdd777657789df08e.gif" alt="Estilo moderno" />
+        <img src="https://i.pinimg.com/736x/ed/1a/a8/ed1aa8a505089c97c8d54d5cdacf0fa8.jpg" alt="Detalles del trabajo" />
+        <img src="https://media3.giphy.com/media/12LH2B6UjylIwFl7bU/200w.gif?cid=6c09b9523ldbkiqs47v2xu69o31b18k75qsrgxpeiz5faxx8&ep=v1_gifs_search&rid=200w.gif&ct=g" alt="Ambiente de barbería" />
+      </div>
+    </section>
+
+    <!-- Sobre Mí -->
+    <section class="seccion-vida animar animar-delay-3">
+      <h2 class="titulo-animado">Sobre Mí</h2>
+      <p>
+        Mi nombre es <strong>Yefri Alexander Pulgarín</strong>, tengo 18 años y he comenzado mi oficio como barbero. 
+        Esta profesión es mi pasión y la ejerzo con mucho amor. Además, la barbería es mi principal fuente de 
+        ingresos para el hogar: un negocio bastante rentable por el cual quiero seguir trabajando hasta llegar 
+        a ser un referente en el sector.
+      </p>
+      <p>
+        Mi sueño es tener varios locales, brindar oportunidades de empleo a otras personas y enseñarles este arte 
+        para que también puedan salir adelante. 
+      </p>
+      <p>
+        También soy instructor deportivo de un grupo de fútbol infantil. A estos niños les transmito el 
+        amor y la pasión por el fútbol, igual que yo la recibí durante mi infancia y les comparto mis conocimientos 
+        para que se destaquen tanto dentro como fuera de la cancha.
+        <img src="https://raw.githubusercontent.com/imagenes-web/alexanderPulgarin/e99308a812da04982f6d4fd323e7096270a6957e/futbol.jpeg" alt="Fútbol" style="max-width: 300px; border-radius: 10px;" />
+      </p>
+    </section>
+
+    <!-- Mis Metas -->
+    <section class="seccion-vida animar animar-delay-4">
+      <h2 class="titulo-animado">Mis Metas</h2>
+      <ul>
+        <li><strong>En 2 años:</strong> Tener mi propia barbería establecida, con una clientela fija y un servicio reconocido en la zona.</li>
+        <li><strong>En 6 años:</strong> Expandirme abriendo una segunda barbería en otro punto estratégico de Supía, fortaleciendo mi marca local.</li>
+        <li><strong>En 10 años y a futuro:</strong> Contar con al menos dos barberías funcionando en Supía y nuevas sedes en otras ciudades. Además, desarrollar otros negocios que pueda administrar desde casa, lo que me permitirá compartir más tiempo con mi familia sin descuidar mis proyectos.</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Alexander Pulgarín - Barbero | Todos los derechos reservados</p>
+  </footer>
+
+  <!-- Botón de música y audio -->
+  <button id="music-control">🎵</button>
+  <audio id="musica" preload="auto">
+    <source src="https://raw.githubusercontent.com/imagenes-web/alexanderPulgarin/29e8d5926aa1a3a54369afca4cbe163d4ed7de53/AWEN%20-%20Until%20It%E2%80%99s%20Time%20(Xinobi%20Remix)%20MIDH%20046.mp3" type="audio/mp3">
+    Tu navegador no soporta audio HTML5.
+  </audio>
+
+  <script>
+    const music = document.getElementById('musica');
+    const btn = document.getElementById('music-control');
+    let playing = false;
+    btn.addEventListener('click', () => {
+      if (playing) {
+        music.pause();
+        btn.textContent = '🎵';
+      } else {
+        music.play();
+        btn.textContent = '⏸️';
+      }
+      playing = !playing;
+    });
+  </script>
+
+</body>
+</html>
